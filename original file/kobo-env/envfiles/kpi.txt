@@ -1,0 +1,9 @@
+KPI_DJANGO_DEBUG=False
+TEMPLATE_DEBUG=False
+#USE_X_FORWARDED_HOST=True
+
+ENKETO_VERSION=Express
+KPI_PREFIX=/
+KPI_BROKER_URL=redis://:password@redis-main.haizaha.private:6160/1
+
+DJANGO_LANGUAGE_CODES=ar cs de-DE en es fr hi ku pl pt tr zh-hans

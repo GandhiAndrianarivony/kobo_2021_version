@@ -1,0 +1,61 @@
+#--------------------------------------------------------------------------------
+# MONGO
+#--------------------------------------------------------------------------------
+# These `KOBO_MONGO_` settings only affect the mongo container itself and the
+# `wait_for_mongo.bash` init script that runs within the kpi and kobocat.
+# Please see kobocat.txt to set container variables
+KOBO_MONGO_PORT=6080
+KOBO_MONGO_HOST=mongo.haizaha.private
+MONGO_INITDB_ROOT_USERNAME=root
+MONGO_INITDB_ROOT_PASSWORD=password
+MONGO_INITDB_DATABASE=formhub
+KOBO_MONGO_USERNAME=kobo
+KOBO_MONGO_PASSWORD=password
+MONGO_DB_NAME=formhub
+MONGO_DB_URL=mongodb://kobo:password@mongo.haizaha.private:6080/formhub
+
+# Default MongoDB backup schedule is weekly at 01:00 AM UTC on Sunday.
+#MONGO_BACKUP_SCHEDULE=0 1 * * 0
+
+#--------------------------------------------------------------------------------
+# POSTGRES
+#--------------------------------------------------------------------------------
+
+# These `KOBO_POSTGRES_` settings only affect the postgres container itself and the
+# `wait_for_postgres.bash` init script that runs within the kpi and kobocat
+# containers. To control Django database connections, please see the
+# `DATABASE_URL` environment variable.
+POSTGRES_PORT=6000
+POSTGRES_HOST=postgres.haizaha.private
+POSTGRES_USER=kobo
+POSTGRES_PASSWORD=password
+KC_POSTGRES_DB=kobocat
+KPI_POSTGRES_DB=koboform
+
+# Postgres database used by kpi and kobocat Django apps
+KC_DATABASE_URL=postgis://kobo:password@postgres.haizaha.private:6000/kobocat
+KPI_DATABASE_URL=postgis://kobo:password@postgres.haizaha.private:6000/koboform
+
+# Replication
+KOBO_POSTGRES_REPLICATION_USER=kobo_replication
+KOBO_POSTGRES_REPLICATION_PASSWORD=H2h81mCDXHdOGpV1Obog
+KOBO_POSTGRES_PRIMARY_ENDPOINT=primary.postgres.haizaha.private
+
+# Default Postgres backup schedule is weekly at 02:00 AM UTC on Sunday.
+#POSTGRES_BACKUP_SCHEDULE=0 2 * * 0
+
+# WAL-E archiving and backup support
+#USE_WAL_E=1
+
+#--------------------------------------------------------------------------------
+# REDIS
+#--------------------------------------------------------------------------------
+
+# Default Redis backup schedule is weekly at 03:00 AM UTC on Sunday.
+#REDIS_BACKUP_SCHEDULE=0 3 * * 0
+
+REDIS_SESSION_URL=redis://:password@redis-cache.haizaha.private:6240/2
+REDIS_LOCK_URL=redis://:password@redis-cache.haizaha.private:6240/3
+REDIS_PASSWORD=password
+CACHE_URL=redis://:password@redis-cache.haizaha.private:6240/5
+REDIS_CACHE_MAX_MEMORY=800

@@ -1,0 +1,103 @@
+{
+    "app name": "Enketo Express for KoboToolbox",
+    "encryption key": "ebd7c268480be2dff181ced350cffd0fbf4392f60a04329c274dff265f84601cf7be30e0c520f50548d8fc761248c61caf07aa5dc36dc2fbf6f2934c",
+    "google": {
+        "analytics": {
+            "domain": "ee.haizaha.kobo",
+            "ua": ""
+        },
+        "api key": ""
+    },
+    "ip filtering": {
+        "allowIPAddressList": [],
+        "allowMetaIPAddress": false,
+        "allowPrivateIPAddress": true,
+        "denyAddressList": []
+    },
+    "less secure encryption key": "this $3cr3t key is crackable",
+    "linked form and data server": {
+        "api key": "a002ced1fb92bd27006b72086a7c8bd4fdbb749e483dbb692231f9c2df38dff1c8d4324ccb6c3f2556713e1daf57def36ebf0f013c28dececeb05c6f",
+        "name": "KoboToolbox",
+        "server url": ""
+    },
+    "maps": [
+        {
+            "attribution": "&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> & <a href=\"https://www.hotosm.org/updates/2013-09-29_a_new_window_on_openstreetmap_data\">Yohan Boniface & Humanitarian OpenStreetMap Team</a> | <a href=\"https://www.openstreetmap.org/copyright\">Terms</a>",
+            "name": "humanitarian",
+            "tiles": [
+                "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+            ]
+        },
+        {
+            "attribution": "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+            "name": "satellite",
+            "tiles": [
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+            ]
+        },
+        {
+            "attribution": "&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap</a> | <a href=\"https://www.openstreetmap.org/copyright\">Terms</a>",
+            "name": "terrain",
+            "tiles": [
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
+            ]
+        },
+        {
+            "attribution": "&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap</a> | <a href=\"https://www.openstreetmap.org/copyright\">Terms</a>",
+            "name": "streets",
+            "tiles": [
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            ]
+        }
+    ],
+    "payload limit": "1mb",
+    "redis": {
+        "cache": {
+            "host": "redis-cache.haizaha.private",
+            "password": "password",
+            "port": "6240"
+        },
+        "main": {
+            "host": "redis-main.haizaha.private",
+            "password": "password",
+            "port": "6160"
+        }
+    },
+    "support": {
+        "email": "support@kobo.local"
+    },
+    "text field character limit": 1000000,
+    "widgets": [
+        "note",
+        "select-desktop",
+        "select-mobile",
+        "autocomplete",
+        "geo",
+        "textarea",
+        "url",
+        "table",
+        "radio",
+        "date",
+        "time",
+        "datetime",
+        "select-media",
+        "file",
+        "draw",
+        "rank",
+        "likert",
+        "range",
+        "columns",
+        "image-view",
+        "comment",
+        "image-map",
+        "date-native",
+        "date-native-ios",
+        "date-mobile",
+        "text-max",
+        "text-print",
+        "rating",
+        "thousands-sep",
+        "../../../node_modules/enketo-image-customization-widget/image-customization",
+        "../../../node_modules/enketo-literacy-test-widget/literacywidget"
+    ]
+}
